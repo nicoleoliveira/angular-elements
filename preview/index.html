@@ -1,6 +1,24 @@
 <html>
+  <head>
+
+  </head>
   <body>
-    <app-hello-world label="meu botão com label"></app-hello-world>
+
+    <!-- <app-hello-world label="meu botão com label"></app-hello-world> -->
+    <app-hello-world
+      title="Batman"
+      rname="Bruce Wayne"
+      occupation="World's Greatest Detective"
+      location="Gotham"
+      first="Detective Comics #27"
+    ></app-hello-world>
     <script src="./angular-elements.js"></script>
+    <script>
+      const component = document.querySelector('app-hello-world');
+      console.log('teste', component)
+      component.addEventListener('display', (event) => {
+        alert(event.detail);
+      });
+    </script>
   </body>
 </html>
